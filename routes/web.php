@@ -26,3 +26,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::controller(App\Http\Controllers\HomeController::class)->group(function () {
+
+    Route::get('/home', 'index');
+});
+
+
