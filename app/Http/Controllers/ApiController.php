@@ -6,7 +6,7 @@ class ApiController extends Controller
 {
     //
     public function get(){
-         return response()->json(['msg'=>'ok',200]);
+         return response()->json(['msg'=>'ok'],200);
     }
     public function post(){
         return response()->json([Request::all()],201);
