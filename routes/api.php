@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::controller(App\Http\Controllers\ApiController::class)->group(function () {
+
+    Route::get('/get', 'get');
+    Route::post('/post', 'post');
+    Route::put('/update/{id}', 'update');
+    Route::delete('/delete/{id}', 'delete');
+});
+
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
